@@ -76,4 +76,4 @@ analysis<-aggregate(final[,3:finalwidth], by=list(final$activity, final$subject)
 #cleanup
 names(analysis)[1:2]<-c("activity", "subject")
 print(analysis[1:15,1:5])
-write.csv(analysis, file="Tidydata.csv")
+write.table(analysis, file="Tidydata.txt", row.name=FALSE)
